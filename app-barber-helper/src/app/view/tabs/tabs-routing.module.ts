@@ -12,12 +12,12 @@ const routes: Routes = [
         loadChildren: () => import('../home/home.module').then(m => m.HomePageModule)
       },
       {
-        path: 'reservas',
-        loadChildren: () => import('../reservas/reserva.module').then(m => m.Tab2PageModule)
+        path: 'reserva',
+        loadChildren: () => import('../reservas/reserva.module').then(m => m.ReservaPageModule)
       },
       {
         path: 'perfil',
-        loadChildren: () => import('../perfil/tab3.module').then(m => m.Tab3PageModule)
+        loadChildren: () => import('../perfil/perfil.module').then(m => m.PerfilPageModule)
       },
       {
         path: '',

@@ -2,17 +2,16 @@ import { IonicModule } from '@ionic/angular';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
-import { ReservaPage } from './reserva.page';
-import { ReservaPageRoutingModule } from './reserva-routing.module';
+import { PerfilPage } from './perfil.page';
+import { PerfilPageRoutingModule } from './perfil-routing.module';
 
 @NgModule({
   imports: [
     IonicModule,
     CommonModule,
     FormsModule,
-    ReservaPageRoutingModule
+    PerfilPageRoutingModule
   ],
-  declarations: [ReservaPage]
+  declarations: [PerfilPage]
 })
-export class ReservaPageModule {}
+export class PerfilPageModule {}
