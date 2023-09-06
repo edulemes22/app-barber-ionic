@@ -9,4 +9,10 @@ export class HomePage {
 
   constructor() {}
 
+  teste() {
+
+    console.log("deu bom")
+
+  }
+
 }
