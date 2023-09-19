@@ -10,25 +10,43 @@
   <div class="centralizar">
     <ion-card style="max-height: 250px;">
       <ion-card-header>
-        <ion-card-title>Ultimas Reservas</ion-card-title>
+        <ion-card-title>Ultima Reserva</ion-card-title>
       </ion-card-header>
       <ion-card-content>
-        <ion-list *ngFor="let item of items" >
-          <ion-item>
-            <ion-thumbnail slot="start">
-              <img alt="corte" src="assets\cut.svg" />
-            </ion-thumbnail>
-            <ion-label>
-              <h2 style="font-weight: bold;">{{item.horario}}</h2>
-              <p>{{item.funcionario}}</p>
-            </ion-label>
-            <ion-chip color="primary">{{item.status}}</ion-chip>
-          </ion-item>
-        </ion-list>
-        <ion-infinite-scroll (ionInfinite)="onIonInfinite($event)">
-          <ion-infinite-scroll-content>
-          </ion-infinite-scroll-content>
-        </ion-infinite-scroll>
+        <ion-item lines="none">
+          <ion-thumbnail slot="start">
+            <img alt="corte" src="assets\cut.svg" />
+          </ion-thumbnail>
+          <ion-label>
+            <h2 style="font-weight: bold;">{{item.horario}}</h2>
+            <p>{{item.funcionario}}</p>
+          </ion-label>
+          <ion-chip color="primary">{{item.status}}</ion-chip>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+    <div class="titulo-reserva">
+      <label for="reserva">Realize sua reserva abaixo</label>
+    </div>
+    <ion-card style="height: 100%">
+      <ion-card-content>
+        <ion-datetime-button datetime="datetime"></ion-datetime-button>
+
+        <ion-modal [keepContentsMounted]="true">
+          <ng-template>
+            <ion-datetime id="datetime"></ion-datetime>
+          </ng-template>
+        </ion-modal>
+        <ion-select style="margin-top: 5px;" label="Serviços" [multiple]="true" label-placement="floating" fill="outline">
+          <ion-select-option value="apples">Apples</ion-select-option>
+          <ion-select-option value="oranges">Oranges</ion-select-option>
+          <ion-select-option value="bananas">Bananas</ion-select-option>
+        </ion-select>
+        <ion-select style="margin-top: 5px;" label="Funcionarios" [multiple]="true" label-placement="floating" fill="outline">
+          <ion-select-option value="apples">Apples</ion-select-option>
+          <ion-select-option value="oranges">Oranges</ion-select-option>
+          <ion-select-option value="bananas">Bananas</ion-select-option>
+        </ion-select>
       </ion-card-content>
     </ion-card>
   </div>

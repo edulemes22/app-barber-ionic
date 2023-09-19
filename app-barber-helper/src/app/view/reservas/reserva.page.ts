@@ -11,30 +11,14 @@ export class ReservaPage {
 
   constructor() {}
 
-  items:ReservaTeste[] = [];
+  item:ReservaTeste = new ReservaTeste;
 
   ngOnInit() {
-    this.generateItems();
-  }
 
-  private generateItems() {
-    const count = this.items.length + 1;
-    for (let i = 0; i < 5; i++) {
-
-      let item = new ReservaTeste;
-      item.funcionario = "Cleiton Faria";
-      item.horario = "13/09/23 - 15:30"
-      item.status = "Finalizado"
-      this.items.push(item);
-
-    }
-  }
-
-  onIonInfinite(ev: any) {
-    this.generateItems();
-    setTimeout(() => {
-      (ev as InfiniteScrollCustomEvent).target.complete();
-    }, 500);
+    this.item.funcionario = "Cleiton Faria";
+    this.item.horario = "13/09/23 - 15:30";
+    this.item.status = "Finalizado";
+    
   }
 
 }
