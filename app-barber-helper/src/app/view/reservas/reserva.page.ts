@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { InfiniteScrollCustomEvent } from '@ionic/angular';
 import { ReservaTeste } from 'src/app/model/reserva-teste.model';
 
 @Component({
