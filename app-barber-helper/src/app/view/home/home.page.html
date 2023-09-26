@@ -19,6 +19,12 @@
     </ion-toolbar>
   </ion-header>
   <ion-content class="ion-padding">
-    <p>Tap a button below to open a specific menu.</p>
+    <p-carousel [value]="horarios" [numVisible]="4" [numScroll]="3" [circular]="false" [responsiveOptions]="responsiveOptions">
+      <ng-template let-horario pTemplate="item">
+        <div style="text-align: center;">
+          <h4>{{ horario }}</h4>
+        </div>
+      </ng-template>
+  </p-carousel>
   </ion-content>
 </div>
